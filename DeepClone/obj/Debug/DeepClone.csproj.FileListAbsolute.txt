@@ -1,0 +1,5 @@
+T:\Local-Code\DeepClone\DeepClone\bin\Debug\DeepClone.exe
+T:\Local-Code\DeepClone\DeepClone\bin\Debug\DeepClone.pdb
+T:\Local-Code\DeepClone\DeepClone\obj\Debug\DeepClone.csprojResolveAssemblyReference.cache
+T:\Local-Code\DeepClone\DeepClone\obj\Debug\DeepClone.exe
+T:\Local-Code\DeepClone\DeepClone\obj\Debug\DeepClone.pdb
