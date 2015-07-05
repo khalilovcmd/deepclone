@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
+
 namespace DeepClone
 {
     public class Cloner
@@ -20,11 +21,11 @@ namespace DeepClone
             if (value.GetType().GetInterface("IEnumerable") != null)
             {
                 IEnumerable enumerable = (IEnumerable)value;
-                
+
                 if (value.GetType().GetInterface("IList") != null)
                 {
                     IList list = (IList)enumerable;
-                    IList newList = (IList) Activator.CreateInstance(list.GetType());
+                    IList newList = (IList)Activator.CreateInstance(list.GetType());
 
                     foreach (var l in list)
                         newList.Add(Clone(l));
@@ -77,44 +78,6 @@ namespace DeepClone
             }
 
             return returnValue;
-        }
-    }
-
-
-    public class TestClass
-    {
-        public int apple { set; get; }
-        public int orange { set; get; }
-        public String color { set; get; }
-        public DateTime timeToCut { set; get; }
-        public List<TestSubClass> subs { set; get; }
-        public List<TestStruct> structs { set; get; }
-        public Dictionary<int, TestSubClass> subsDictionary { set; get; }
-        public static String standStill = "asdasd";
-
-        public TestClass testClass { set; get; }
-    }
-
-    public class TestSubClass
-    {
-        public String name {set;get;}
-        public ConsoleColor color { set; get; }
-        public ConsoleColor color1 { set; get; }
-    }
-
-    public struct TestStruct
-    {
-        public int a { set; get; }
-        public int b { set; get; }
-    }
-
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Cloner cloner = new Cloner();
-            Console.ReadKey();
         }
     }
 }
